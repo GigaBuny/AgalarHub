@@ -14,7 +14,7 @@ local Window = Rayfield:CreateWindow({
       Invite = "HCjknp8G", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = false -- Set this to false to make them join the discord every time they load it up
    },
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
       Title = "Agalar Hub",
       Subtitle = "Key System",
@@ -27,7 +27,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 local MainTab = Window:CreateTab("Home", nil) -- Title, Image
-local Paragraph = MainTab:CreateParagraph({Title = "Hakkında", Content = "Bu script BunyoTr tarafından agalrına hazırlanmıştır İyi oyunlar"})
+local Paragraph = MainTab:CreateParagraph({Title = "Hakkında", Content = "Bu script BunyoTr tarafından agalarına hazırlanmıştır İyi oyunlar"})
 
 local ScriptTab = Window:CreateTab("Da Hood", nil) -- Title, Image
 
