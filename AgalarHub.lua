@@ -14,7 +14,7 @@ local Window = Rayfield:CreateWindow({
       Invite = "Y2dVSvbT", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
       Title = "Agalar Hub",
       Subtitle = "Key System",
@@ -53,6 +53,13 @@ local Button = ScriptTab:CreateButton({
    end,
 })
 
+local Button = ScriptTab:CreateButton({
+   Name = "Vortex Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex", true))()
+   end,
+})
+
 local Script2Tab = Window:CreateTab("Blox Fruits", nil) -- Title, Image
 
 local Button = Script2Tab:CreateButton({
@@ -81,14 +88,14 @@ local Button = Script5Tab:CreateButton({
 local Script6Tab = Window:CreateTab("Blade Ball", nil) -- Title, Image
 
 local Button = Script6Tab:CreateButton({
-   Name = "Auto Parry FFJ Hub"
+   Name = "Auto Parry FFJ Hub",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
    end,
 })
 
 local Button = Script6Tab:CreateButton({
-   Name = "Visual 3.5"
+   Name = "Visual 3.5",
    Callback = function()
       loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a5945467f3b9388503ca653c0ea49cba.lua"))()
    end,
@@ -97,14 +104,14 @@ local Button = Script6Tab:CreateButton({
 local Script7Tab = Window:CreateTab("Doors", nil) -- Title, Image
 
 local Button = Script7Tab:CreateButton({
-   Name = "Doors FFJ Hub"
+   Name = "Doors FFJ Hub",
    Callback = function()
       loadstring(game:HttpGet('https://rawscripts.net/raw/DOORS-FFJ-Hub-11365'))()
    end,
 })
 
 local Button = Script7Tab:CreateButton({
-   Name = "Blacking X Bob Hub"
+   Name = "Blacking X Bob Hub",
    Callback = function()
       loadstring(game:HttpGetAsync("https://pastebin.com/raw/R8QMbhzv"))()()
    end,
@@ -156,22 +163,6 @@ local Button = Script4Tab:CreateButton({
    end,
 })
 
-local MiscTab = Window:CreateTab("Misc", nil) -- Title, Image
-
-local Button = MiscTab:CreateButton({
-   Name = "İnfinite Yield",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-   end,
-})
-
-local Button = MiscTab:CreateButton({
-   Name = "System Broken",
-   Callback = function()
-   loadstring(game:HttpGet("https://scriptblox.com/raw/Ragdoll-Engine-BEST-SCRIPT-WORKING-SystemBroken-7544"))() 
-   end,
-})
-
 local HubTab = Window:CreateTab("Hubs", nil) -- Title, Image
 
 local Button = HubTab:CreateButton({
@@ -185,5 +176,48 @@ local Button = HubTab:CreateButton({
    Name = "HG Hub(key needed)",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/HG-Chenxin/HG-HUB/main/Universal-Script-Solara.lua"))()
+   end,
+})
+
+local MiscTab = Window:CreateTab("Misc", nil) -- Title, Image
+
+local Button = MiscTab:CreateButton({
+   Name = "Infinite Yield",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+   end,
+})
+
+local Button = MiscTab:CreateButton({
+   Name = "System Broken",
+   Callback = function()
+   loadstring(game:HttpGet("https://scriptblox.com/raw/Ragdoll-Engine-BEST-SCRIPT-WORKING-SystemBroken-7544"))() 
+   end,
+})
+
+local Button = MiscTab:CreateButton({
+   Name = "Headless Free",
+   Callback = function()
+      game.Players.LocalPlayer.Character.Head.Transparency = 1
+      game.Players.LocalPlayer.Character.Head.Transparency = 1
+      for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+      if (v:IsA("Decal")) then
+      v.Transparency = 1
+      end
+      end 
+      
+   end,
+})
+
+local Button = MiscTab:CreateButton({
+   Name = "Zombie Animation",
+   Callback = function()
+      while true do
+         local Animate = game.Players.LocalPlayer.Character.Animate
+         Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+         Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+         game.Players.LocalPlayer.Character.Humanoid.Jump = false
+         wait(1)
+         end 
    end,
 })
